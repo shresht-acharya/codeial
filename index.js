@@ -1,5 +1,5 @@
 const express = require('express');
-const env = require('./config/environment');
+//const env = require('./config/environment');
 const cookieParser = require('cookie-parser');
 const app = express();
 const port = 8000;
@@ -25,8 +25,10 @@ console.log('chat server is listening on port 5000');
 const path = require('path');
 
 app.use(sassMiddleware({
-    src: path.join(__dirname, env.asset_path, 'scss'),
-    dest: path.join(__dirname, env.asset_path, 'css'),
+   // src: path.join(__dirname, env.asset_path, 'scss'),
+    //dest: path.join(__dirname, env.asset_path, 'css'),
+    src: './assets/scss',
+    dest: './assets/css',
     debug: true,
     outputStyle: 'extended',
     prefix: '/css'
@@ -35,7 +37,8 @@ app.use(express.urlencoded());
 
 app.use(cookieParser());
 
-app.use(express.static(env.asset_path));
+//app.use(express.static(env.asset_path));
+app.use(express.static('./assets'));
 // make the uploads path available to the browser
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
@@ -55,7 +58,7 @@ app.set('views', './views');
 app.use(session({
     name: 'codeial',
     // TODO change the secret before deployment in production mode
-    secret: env.session_cookie_key,
+    secret: 'blahsomething',
     saveUninitialized: false,
     resave: false,
     cookie: {
@@ -95,3 +98,5 @@ app.listen(port, function(err){
 
 
 //153202805957-56il6t9tel3hiqgqa7ui5ah9n37a30j5.apps.googleusercontent.com
+//ssh -i "codeialshresht.pem" ubuntu@ec2-52-86-25-39.compute-1.amazonaws.com
+//curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
