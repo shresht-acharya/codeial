@@ -1,16 +1,39 @@
 #home-container{
+    // background: #EB5757;  /* fallback for old browsers */
+//background: -webkit-linear-gradient(to left, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+//background: linear-gradient(to left, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background-size: cover;
+background-color: rgba(0,0,0, 0.4);
+background-color: rgba(27, 22, 22, 0.836);
+
+height: 100%;
+
     display: flex;
+
 
     #feed-posts{
         width: 70%;
-        padding: 10px;
+       // padding: 10px;
+       padding-left: 20%;
+       color: blanchedalmond;
+       font-size: 20px;
+       font-weight: bold;
+       
+        
+      
     }
 
     #user-friends{
         width: 30%;
-        padding: 10px;
-        border-left: 1px solid lightgrey;
+        padding-left: 30%;
+        color: whitesmoke;
+
         height: 100%;
+        font-size: 25px;
+        
+
+        
     }
 
 }

@@ -3,20 +3,21 @@
         display: flex;
         justify-content: space-between;
         padding: 0 10px;
-        background: #2196f3;
+        background:#120a0a;
         color: white;
-        box-shadow: 1px 1px 1px 1px lightgrey;
+        box-shadow: 1px 1px 1px 1px black;
 
         .mini-logo{
             p{
                 margin: 5px;
                 font-size: 1.4rem;
                 font-weight: bold;
+                font-style: harbinger;
             }
         }
 
         .auth-links{
-            ul{
+            ul{ 
                 margin: 5% 5px;
                 display: flex;
                 list-style: none;

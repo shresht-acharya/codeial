@@ -100,3 +100,4 @@ app.listen(port, function(err){
 //153202805957-56il6t9tel3hiqgqa7ui5ah9n37a30j5.apps.googleusercontent.com
 //ssh -i "codeialshresht.pem" ubuntu@ec2-52-86-25-39.compute-1.amazonaws.com
 //curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+// my ip 52.86.25.39
